@@ -19,7 +19,6 @@ if errorlevel 1 goto Backup
 xcopy "%programdata%\AnyDesk\service.conf" "%~dp0" /i /e /y
 xcopy "%programdata%\AnyDesk\system.conf" "%~dp0" /i /e /y
 cls
-
 @echo Backup Successfully
 pause
 exit /b
@@ -27,7 +26,7 @@ exit /b
 :Restore
 xcopy "service.conf" "%programdata%\AnyDesk" /i /e /y /v /h
 xcopy "system.conf" "%programdata%\AnyDesk" /i /e /y /v /h
-
+cls
 @echo Restored Successfully
 pause
 exit /b
