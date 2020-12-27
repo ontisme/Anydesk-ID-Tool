@@ -1,2 +1,2 @@
 # Anydesk-ID-Tool
-Just a batchfile can be backup / restore your Anydesk ID
+Just a batchfile can backup / restore your Anydesk ID
