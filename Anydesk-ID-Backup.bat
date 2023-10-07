@@ -1,7 +1,7 @@
 @echo off
 setlocal EnableDelayedExpansion
 
-@echo.Anydesk ID and Alias Backup / Restore¡G
+@echo.Anydesk ID and Alias Backup / RestoreÂ¡G
 @echo.
 @echo.===========================
 @echo.                1 - Backup
@@ -16,16 +16,16 @@ if errorlevel 2 goto Restore
 if errorlevel 1 goto Backup 
 
 :Backup
-xcopy "%programdata%\AnyDesk\service.conf" "%~dp0" /i /e /y
-xcopy "%programdata%\AnyDesk\system.conf" "%~dp0" /i /e /y
+xcopy "%appdata%\AnyDesk\service.conf" "%~dp0" /i /e /y
+xcopy "%appdata%\AnyDesk\system.conf" "%~dp0" /i /e /y
 cls
 @echo Backup Successfully
 pause
 exit /b
 
 :Restore
-xcopy "service.conf" "%programdata%\AnyDesk" /i /e /y /v /h
-xcopy "system.conf" "%programdata%\AnyDesk" /i /e /y /v /h
+xcopy "service.conf" "%appdata%\AnyDesk" /i /e /y /v /h
+xcopy "system.conf" "%appdata%\AnyDesk" /i /e /y /v /h
 cls
 @echo Restored Successfully
 pause
